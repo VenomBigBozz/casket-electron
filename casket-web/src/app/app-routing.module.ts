@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { disconnect } from 'process';
 import { callbackify } from 'util';
-import { HomeComponent } from 'src/app/home/home.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent }

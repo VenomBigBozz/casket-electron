@@ -1,5 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { ThemeService } from 'src/services/theme.service';
+import { ThemeService } from '../../../src/services/theme.service';
 
 import {
   trigger,
@@ -21,12 +21,12 @@ import {
         opacity: 1,
         visibility: 'visible'
       })),
-
+      
       state('closed', style({
         opacity: 0,
         visibility: 'hidden'
       })),
-
+      
       transition('open <=> closed', [ animate('.1s') ]),
     ]),
 
@@ -62,18 +62,16 @@ import {
       
       transition(':enter', [
         style({
-          right: '100%',
+          right: 'auto',
         }),
-        animate('250ms', style({
-          height: 'auto',
-          right: '0px',
+        animate('200ms', style({
+          right: '100px',
         })),
       ]),
       
       transition(':leave', [
-        animate('250ms', style({
-          right: '100%',
-          height: '0px',
+        animate('200ms', style({
+          right: 'auto',
         })),
       ])
     ]),
@@ -82,17 +80,16 @@ import {
       
       transition(':enter', [
         style({
-          left: '100%',
+          left: 'auto',
         }),
         animate('200ms', style({
-          width: '100%',
-          left: '0px',
+          left: '100px',
         })),
       ]),
-
+      
       transition(':leave', [
         animate('200ms', style({
-          left: '100%',
+          left: 'auto',
         })),
       ])
     ]),
