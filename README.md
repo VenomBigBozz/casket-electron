@@ -13,18 +13,6 @@
 
 Bootstrap and package your project with Angular 11 and Electron 11 (Typescript + SASS + Hot Reload) for creating Desktop applications.
 
-Currently runs with:
-
-- Angular v11.0.3
-- Electron v11.0.3
-- Electron Builder v22.9.1
-
-With this sample, you can :
-
-- Run your app in a local development environment with Electron & Hot reload
-- Run your app in a production environment
-- Package your app into an executable file for Linux, Windows & Mac
-
 /!\ Hot reload only pertains to the renderer process. The main electron process is not able to be hot reloaded, only restarted.
 
 /!\ Angular 11.x CLI needs Node 10.13 or later to work correctly.
@@ -56,10 +44,6 @@ Voila! You can use your Angular + Electron app in a local development environmen
 The application code is managed by `main.ts`. In this sample, the app runs with a simple Angular App (http://localhost:4200) and an Electron window.
 The Angular component contains an example of Electron and NodeJS native lib import.
 You can disable "Developer Tools" by commenting `win.webContents.openDevTools();` in `main.ts`.
-
-## Use Electron / NodeJS / 3rd party libraries
-
-As see in previous chapter, this sample project runs on both mode (web and electron). To make this happens, **you have to import your dependencies the right way**. Please check `providers/electron.service.ts` to watch how conditional import of libraries has to be done when using electron / NodeJS / 3rd party librairies in renderer context (ie. Angular).
 
 ## Browser mode
 
